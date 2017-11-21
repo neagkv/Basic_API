@@ -1,11 +1,11 @@
-package hello;
+package model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 //ignore unknown values
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Quote {
 
-    //
+
     private String type;
     private Value value;
 
