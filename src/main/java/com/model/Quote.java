@@ -1,4 +1,4 @@
-package model;
+package com.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 //ignore unknown values
@@ -36,3 +36,6 @@ public class Quote {
                 '}';
     }
 }
+
+
+

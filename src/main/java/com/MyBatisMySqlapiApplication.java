@@ -1,5 +1,6 @@
+package com;
 
-import model.Quote;
+import com.model.Quote;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.slf4j.Logger;

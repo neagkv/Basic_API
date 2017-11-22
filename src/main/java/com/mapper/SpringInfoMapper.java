@@ -1,6 +1,6 @@
-package mapper;
-import model.Quote;
-import model.Value;
+package com.mapper;
+import com.model.Quote;
+import com.model.Value;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.*;
 
@@ -11,9 +11,9 @@ import org.apache.ibatis.annotations.*;
     public interface SpringInfoMapper {
 
 
-        String INSERT_Value = "INSERT INTO `Spring_info`.`Value` (`quote`) VALUES " + "(#{quote}";
+        String INSERT_Value = "INSERT INTO `Spring_Info`.`Value` (`id`, `quote`) VALUES " + "(#{id}, #{quote})";
 
-        String INSERT_Quote = "INSERT INTO `Spring_info`.`Quote` (`type`, `value`) VALUES " + "(#{type}, {#value})";
+        String INSERT_Quote = "INSERT INTO `Spring_Info`.`Quote` (`type`) VALUES " + "(#{type})";
 
 
         @Insert(INSERT_Value)

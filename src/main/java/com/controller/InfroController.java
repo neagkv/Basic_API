@@ -1,10 +1,11 @@
-package controller;
+package com.controller;
 
-import model.Value;
+import com.model.Value;
+import com.model.Quote;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import service.InfoService;
+import com.service.InfoService;
 
 
 
@@ -19,9 +20,10 @@ public class InfroController {
     InfoService infoService;
 
     @RequestMapping("/info")
-    public Value loadInfo()  {
-        return infoService.loadValue();
+    public Quote loadInfo()  {
+        return infoService.loadQuote();
     }
+
 
 
 }
