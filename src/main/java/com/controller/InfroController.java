@@ -19,6 +19,7 @@ public class InfroController {
     @Autowired
     InfoService infoService;
 
+    //maps /info to the http:// request
     @RequestMapping("/info")
     public Quote loadInfo()  {
         return infoService.loadQuote();
