@@ -6,7 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
@@ -14,7 +16,15 @@ import org.springframework.web.client.RestTemplate;
 
 
 @SpringBootApplication
-public class MyBatisMySqlapiApplication {
+public class MyBatisMySqlapiApplication extends SpringBootServletInitializer {
+
+
+
+	@Override
+	protected SpringApplicationBuilder configure (SpringApplicationBuilder application){
+		return application.sources(MyBatisMySqlapiApplication.class);
+	}
+
 
 	private static final Logger log = LoggerFactory.getLogger(MyBatisMySqlapiApplication.class);
 
